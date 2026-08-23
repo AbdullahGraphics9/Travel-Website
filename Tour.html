@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tour Packages - Travel Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Travel Explorer</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tours.html" class="active">Tours</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2 class="section-title">Our Exclusive Tour Packages</h2>
+
+    <div class="cards-grid">
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="https://picsum.photos/id/1015/400/250" alt="Hunza">
+        <div class="card-body">
+          <h3>Hunza Valley Trip</h3>
+          <p class="location">📍 Gilgit-Baltistan</p>
+          <div class="price-tag">PKR 45,000 / Person</div>
+          <button class="btn-details" onclick="openDetails('Hunza Valley Trip', 'PKR 45,000 / Person', '5 Days & 4 Nights', 'Includes transport, 3-star hotel stay, daily breakfast, tour guide, and Jeep track to Attabad Lake.')">Check Details</button>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="https://picsum.photos/id/1036/400/250" alt="Skardu">
+        <div class="card-body">
+          <h3>Skardu Resort Tour</h3>
+          <p class="location">📍 Skardu Valley</p>
+          <div class="price-tag">PKR 65,000 / Person</div>
+          <button class="btn-details" onclick="openDetails('Skardu Resort Tour', 'PKR 65,000 / Person', '7 Days & 6 Nights', 'Includes luxury resort stay, flight/prado transport, Shangrila Resort, Katpana Cold Desert visit, and boat rides.')">Check Details</button>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="https://picsum.photos/id/1043/400/250" alt="Lahore">
+        <div class="card-body">
+          <h3>Lahore Heritage Tour</h3>
+          <p class="location">📍 Lahore, Punjab</p>
+          <div class="price-tag">PKR 20,000 / Person</div>
+          <button class="btn-details" onclick="openDetails('Lahore Heritage Tour', 'PKR 20,000 / Person', '3 Days & 2 Nights', 'Includes visits to Badshahi Mosque, Lahore Fort, Wagah Border event, and traditional food tour.')">Check Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Detail Popup Modal -->
+  <div class="modal" id="tourModal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeDetails()">&times;</span>
+      <h2 id="modalTitle" style="margin-bottom: 10px; color: #0f172a;"></h2>
+      <p id="modalDuration" style="font-weight: bold; color: #64748b; margin-bottom: 5px;"></p>
+      <p id="modalPrice" style="color: #0284c7; font-size: 18px; font-weight: bold; margin-bottom: 15px;"></p>
+      <p id="modalDesc" style="line-height: 1.5; color: #334155;"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Travel Explorer. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function openDetails(title, price, duration, desc) {
+      document.getElementById('modalTitle').innerText = title;
+      document.getElementById('modalPrice').innerText = "Price: " + price;
+      document.getElementById('modalDuration').innerText = "Duration: " + duration;
+      document.getElementById('modalDesc').innerText = desc;
+      document.getElementById('tourModal').style.display = 'flex';
+    }
+
+    function closeDetails() {
+      document.getElementById('tourModal').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
